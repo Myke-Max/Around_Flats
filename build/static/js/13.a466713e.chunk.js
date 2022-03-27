@@ -1,0 +1,2 @@
+(this["webpackJsonptest-project-20210119"]=this["webpackJsonptest-project-20210119"]||[]).push([[13],{463:function(t,e,n){"use strict";n.r(e);var s=n(282),c=n(291),i=(n(1),n(3));e.default=function(){return Object(i.jsx)(s.a,{height:"100vh",display:"flex",justifyContent:"center",alignItems:"center",children:Object(i.jsx)(c.a,{variant:"h1",children:"Page not found"})})}}}]);
+//# sourceMappingURL=13.a466713e.chunk.js.map
