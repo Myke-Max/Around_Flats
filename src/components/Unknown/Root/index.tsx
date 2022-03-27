@@ -42,11 +42,11 @@ const Root: React.FC = () => {
         <AppBar />
         <Suspense fallback={<Spinner />}>
           <Switch>
-            <Route path="/" component={HomeScreen} exact />
+            <Route exact path="/" component={HomeScreen}  />
             <Route path="/registration" component={() => <Redirect to="/" />} />
             <Route path="/login" component={() => <Redirect to="/" />} />
             <Route path="/flats" component={SearchFlats} />
-            <Route path="/" component={NotFoundScreen} />
+            <Route component={NotFoundScreen} />
           </Switch>
         </Suspense>
       </AuthenticatedLayout>
@@ -57,10 +57,11 @@ const Root: React.FC = () => {
     <GuestLayout>
       <Suspense fallback={<Spinner />}>
         <Switch>
+             <Route exact path="/" component={() => <Redirect to="/login" />}  />
+           <Route path="/login" component={SignInScreen} />
           <Route path="/flats" component={() => <Redirect to="/login" />} />
           <Route path="/registration" component={SignUpScreen} />
-          <Route path="/login" component={SignInScreen} />
-          <Route path="/" component={NotFoundScreen} />
+          <Route  component={NotFoundScreen} />
         </Switch>
       </Suspense>
     </GuestLayout>
